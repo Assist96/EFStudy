@@ -57,6 +57,21 @@ namespace EFCRUD
             //4、保存变化
             dbContext.SaveChanges();
             #endregion
+
+            #region 查询
+            foreach (var item in dbContext.TblEmployee) {
+                Console.WriteLine(item.LastName+" "+item.FirstName+" "+item.Salary);
+            }
+            #region linq查询
+            var linq = from table in dbContext.TblEmployee
+                       where table.Salary > 100
+                       select table;
+            foreach (var item in linq)
+            {
+                Console.WriteLine(item.FirstName+" "+item.LastName+" "+item.Salary);
+            }
+                      #endregion
+                      #endregion
             Console.ReadKey();
         }
     }
