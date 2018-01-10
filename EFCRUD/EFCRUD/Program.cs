@@ -63,6 +63,7 @@ namespace EFCRUD
                 Console.WriteLine(item.LastName+" "+item.FirstName+" "+item.Salary);
             }
             #region linq查询
+            //linq返回值是IQueryable类型
             var linq = from table in dbContext.TblEmployee
                        where table.Salary > 100
                        select table;

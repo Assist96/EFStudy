@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContravariantAndCovariant.cs" />
     <Compile Include="C__MigrationHistory.cs">
       <DependentUpon>EFModel.tt</DependentUpon>
     </Compile>
